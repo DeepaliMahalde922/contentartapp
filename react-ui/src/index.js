@@ -68,13 +68,16 @@ const shopOrigin: ?string = shop && `https://${shop}`;
 
 const target = document.getElementById('root');
 
+
+const shopOriginPro = `https://${SHOP_ORIGIN}`;
+
 /*const cookies = new Cookies();
 cookies.set('myCat', 'Pacmandfdfdfafad');
 console.log(cookies.get('myCat')); // Pacman
 console.log(cookies.get('_landing_page'));*/
 
 render(
-  <EmbeddedApp apiKey={apiKey} shopOrigin={shopOrigin} forceRedirect>
+  <EmbeddedApp apiKey={apiKey} shopOrigin={shopOriginPro} forceRedirect>
     <Provider store={store}>
       <ConnectedRouter history={history}>
         <App />
