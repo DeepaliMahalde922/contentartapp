@@ -75,7 +75,7 @@ export class ProductsPageComponent extends Component<Props, OwnState> {
     const userfields = this.state;
     var dataarr = [];
     let temp_bundled = {};
-    temp_bundled.shopUrl = SHOP_ORIGIN;
+    temp_bundled.shopUrl = 'https://'+SHOP_ORIGIN;
     temp_bundled.describe = this.state.describe;
     temp_bundled.contenType = this.state.contenType;
     temp_bundled.productData = this.state.productData;
