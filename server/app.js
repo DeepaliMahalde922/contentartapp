@@ -32,14 +32,14 @@ const app = express();
 if (ENV === 'production') {
   app.use(gzip());
   // Secure your Express apps by setting various HTTP headers. Documentation: https://github.com/helmetjs/helmet
-  app.use(
+  /*app.use(
     helmet({
       frameguard: {
         action: 'allow-from',
         domain: '*'
       }
     })
-  );
+  );*/
 }
 
 const env = {
