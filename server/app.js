@@ -36,7 +36,7 @@ if (ENV === 'production') {
     helmet({
       frameguard: {
         action: 'allow-from',
-        domain: 'https://testbagstore.myshopify.com'
+        domain: 'https://myshopify.com'
       }
     })
   );
