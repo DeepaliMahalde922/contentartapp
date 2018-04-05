@@ -389,7 +389,7 @@ var options = {
 };
 
 var pgp = __webpack_require__(7)(options);
-var connectionString = 'postgres://lscbefdvgkkhho:5d5e622a66aa9345ac0120284caca5f4351d3c024497c2a8cd031dc55709fbe7@ec2-23-21-121-220.compute-1.amazonaws.com:5432/d88e3905stiaec?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory';
+var connectionString = 'postgres://hnmucpxelzxemu:ea53bf28e2a3678dadd2226093072fe2d67fbb1844447f9aae6c4818330384dc@ec2-54-204-21-226.compute-1.amazonaws.com:5432/d9eem55gemkhvm?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory';
 //var connectionString = 'postgres://lscbefdvgkkhho:5d5e622a66aa9345ac0120284caca5f4351d3c024497c2a8cd031dc55709fbe7@ec2-23-21-121-220.compute-1.amazonaws.com/d88e3905stiaec';
 var pdb = pgp(connectionString);
 
@@ -603,7 +603,7 @@ module.exports = require("sequelize");
 /* 23 */
 /***/ (function(module, exports) {
 
-module.exports = {"development":{"username":"postgres","password":"TechAdmin","database":"shopify-app-development","host":"127.0.0.1","dialect":"postgres"},"test":{"username":"postgres","password":"TechAdmin","database":"shopify-app-test","host":"127.0.0.1","dialect":"postgres","logging":false},"production":{"use_env_variable":"postgres://hnmucpxelzxemu:ea53bf28e2a3678dadd2226093072fe2d67fbb1844447f9aae6c4818330384dc@ec2-54-204-21-226.compute-1.amazonaws.com:5432/d9eem55gemkhvm","username":"lscbefdvgkkhho","password":"5d5e622a66aa9345ac0120284caca5f4351d3c024497c2a8cd031dc55709fbe7","database":"d88e3905stiaec","host":"ec2-23-21-121-220.compute-1.amazonaws.com","dialect":"postgres"}}
+module.exports = {"development":{"username":"postgres","password":"TechAdmin","database":"shopify-app-development","host":"127.0.0.1","dialect":"postgres"},"test":{"username":"postgres","password":"TechAdmin","database":"shopify-app-test","host":"127.0.0.1","dialect":"postgres","logging":false},"production":{"use_env_variable":"postgres://hnmucpxelzxemu:ea53bf28e2a3678dadd2226093072fe2d67fbb1844447f9aae6c4818330384dc@ec2-54-204-21-226.compute-1.amazonaws.com:5432/d9eem55gemkhvm","username":"hnmucpxelzxemu","password":"ea53bf28e2a3678dadd2226093072fe2d67fbb1844447f9aae6c4818330384dc","database":"d9eem55gemkhvm","host":"ec2-54-204-21-226.compute-1.amazonaws.com","dialect":"postgres"}}
 
 /***/ }),
 /* 24 */
@@ -736,8 +736,8 @@ var options = {
 };
 
 var pgp = __webpack_require__(7)(options);
-
-var connectionString = 'postgres://lscbefdvgkkhho:5d5e622a66aa9345ac0120284caca5f4351d3c024497c2a8cd031dc55709fbe7@ec2-23-21-121-220.compute-1.amazonaws.com:5432/d88e3905stiaec?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory';
+var connectionString = 'postgres://hnmucpxelzxemu:ea53bf28e2a3678dadd2226093072fe2d67fbb1844447f9aae6c4818330384dc@ec2-54-204-21-226.compute-1.amazonaws.com:5432/d9eem55gemkhvm?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory';
+//var connectionString = 'postgres://lscbefdvgkkhho:5d5e622a66aa9345ac0120284caca5f4351d3c024497c2a8cd031dc55709fbe7@ec2-23-21-121-220.compute-1.amazonaws.com:5432/d88e3905stiaec?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory';
 //var connectionString = 'postgres://lscbefdvgkkhho:5d5e622a66aa9345ac0120284caca5f4351d3c024497c2a8cd031dc55709fbe7@ec2-23-21-121-220.compute-1.amazonaws.com/d88e3905stiaec';
 var pdb = pgp(connectionString);
 
