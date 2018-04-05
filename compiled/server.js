@@ -401,12 +401,12 @@ var app = (0, _express2.default)();
 if (_config.ENV === 'production') {
   app.use((0, _compression2.default)());
   // Secure your Express apps by setting various HTTP headers. Documentation: https://github.com/helmetjs/helmet
-  /*app.use((0, _helmet2.default)({
+  app.use((0, _helmet2.default)({
     frameguard: {
       action: 'allow-from',
       domain: 'https://myshopify.com'
     }
-  }));*/
+  }));
 }
 
 var env = {
