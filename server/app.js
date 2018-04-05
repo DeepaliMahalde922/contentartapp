@@ -25,22 +25,6 @@ require('dotenv').config();
 // Connect database
 connect();
 
-var promise = require('bluebird');
-
-var options = {
-  promiseLib: promise,
-  query: e => {
-    console.log(e.query);
-  }
-};
-
-var pgp = require('pg-promise')(options);
-var connectionString = 'postgres://postgres:TechAdmin@localhost/shopify-app-development';
-var pdb = pgp(connectionString);
-
-
-
-
 const { SHOPIFY_API_KEY } = process.env;
 
 const app = express();
@@ -52,7 +36,7 @@ if (ENV === 'production') {
     helmet({
       frameguard: {
         action: 'allow-from',
-        domain: 'https://myshopify.com'
+        domain: 'https://testbagstore.myshopify.com'
       }
     })
   );
