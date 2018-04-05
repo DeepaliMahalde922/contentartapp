@@ -11,6 +11,21 @@ type OwnProps = {
 // These values are used in development. They are defined in the .env file
 const { REACT_APP_SHOPIFY_API_KEY, REACT_APP_SHOP_ORIGIN } = process.env;
 
+type environment = {
+  SHOPIFY_API_KEY?: string,
+  SHOP_ORIGIN?: string
+};
+
+const env: environment = window.env || {};
+
+// Express injects these values in the client script when serving index.html
+const { SHOPIFY_API_KEY, SHOP_ORIGIN } = env;
+
+const apiKey: ?string = REACT_APP_SHOPIFY_API_KEY || SHOPIFY_API_KEY;
+const shop: ?string = REACT_APP_SHOP_ORIGIN || SHOP_ORIGIN;
+
+const shopOrigin: ?string = shop && `https://${shop}`;
+
 class Adminorderlist extends React.Component {
 
 
@@ -204,7 +219,7 @@ class Adminorderlist extends React.Component {
     }
 
     return (
-      <Page title="Orders" secondaryActions={[{ content: 'Back to products', onAction: this.handleGoToProducts },]} >
+      <Page title="Admin Orders" secondaryActions={[{ content: 'Back to products', onAction: this.handleGoToProducts },]} >
       
         
         <Layout sectioned>
