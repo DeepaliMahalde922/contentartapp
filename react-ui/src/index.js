@@ -11,7 +11,6 @@ import '@shopify/polaris/styles.css';
 import { EmbeddedApp } from '@shopify/polaris/embedded';
 
 import store, { history } from './store';
-import Cookies from 'universal-cookie';
 
 import './index.css';
 import App from './App';
