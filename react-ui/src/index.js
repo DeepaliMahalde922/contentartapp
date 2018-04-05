@@ -55,6 +55,9 @@ type environment = {
 
 const env: environment = window.env || {};
 
+console.log(window.env);
+console.log(process.env);
+
 // Express injects these values in the client script when serving index.html
 const { SHOPIFY_API_KEY, SHOP_ORIGIN } = env;
 

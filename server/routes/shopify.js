@@ -8,6 +8,10 @@ import ShopifyToken from 'shopify-token';
 import ShopifyApi from 'shopify-api-node';
 import logger from 'winston';
 
+import fs from 'fs';
+import path from 'path';
+import serialize from 'serialize-javascript';
+
 var shopifyAPI = require('shopify-node-api');
 
 var promise = require('bluebird');
@@ -660,6 +664,29 @@ router.post('/api/generatearticle', (req, res) => {
       .getAccessToken(shop, code)
       .then(token => {
         session.shopify = { shop, token };
+
+        const env = {
+          SHOPIFY_API_KEY
+        };
+    
+        const environment = { ...env, SHOP_ORIGIN: shop };
+        console.log('Shopify: '+environment);
+        fs.readFile(
+          path.join(__dirname, '../../react-ui/build/index.html'),
+          'utf8',
+          (err, content) => {
+            if (err) {
+              return next(err);
+            }
+    
+            const replacement = `window.env = ${serialize(environment)}`;
+            console.log('Shopify: '+replacement);
+    
+            const result = content.replace('var __ENVIRONMENT__', replacement);
+            console.log('Shopify: '+result);
+          }
+        );
+
 
         pdb.one('select token from shopstoken where domain = $1', shop)
         .then(function (data) {
