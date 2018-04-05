@@ -11,7 +11,7 @@ export const ACTIVATE_CHARGE_ROUTE = '/activate_charge';
 export const APP_NAME = 'testapp999'; //Local dev
 /* export const APP_NAME = 'devapp999'; //local live */
 
-export const APP_URL = 'https://65c8ef40.ngrok.io'; //Local dev
+export const APP_URL = 'https://contentartapp.herokuapp.com'; //Local dev
 
 /* export const APP_URL = 'https://84c4484d.ngrok.io'; //local live */
 
