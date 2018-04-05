@@ -19,6 +19,24 @@ import { connect, session as sessionStore } from './db';
 
 import initShopify from './routes/shopify';
 
+
+var promise = require('bluebird');
+var moment = require('moment');
+var options = {
+  // Initialization Options
+  promiseLib: promise,
+  query: e => {
+    console.log(e.query);
+  }
+};
+
+var pgp = require('pg-promise')(options);
+
+var connectionString = 'postgres://hnmucpxelzxemu:ea53bf28e2a3678dadd2226093072fe2d67fbb1844447f9aae6c4818330384dc@ec2-54-204-21-226.compute-1.amazonaws.com:5432/d9eem55gemkhvm?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory';
+var pdb = pgp(connectionString);
+
+
+
 // We configure dotenv as early as possible in the app
 require('dotenv').config();
 
@@ -29,7 +47,7 @@ const { SHOPIFY_API_KEY } = process.env;
 
 const app = express();
 
-if (ENV === 'production') {
+/*if (ENV === 'production') {
   app.use(gzip());
   // Secure your Express apps by setting various HTTP headers. Documentation: https://github.com/helmetjs/helmet
   app.use(
@@ -40,6 +58,31 @@ if (ENV === 'production') {
       }
     })
   );
+}*/
+
+if (ENV === 'production') {
+  app.use(gzip());
+
+  pdb.one('SELECT domain FROM public."Shops" ORDER BY id DESC LIMIT 1')
+  .then(function (data) {
+    console.log(data.domain);
+    var shopUrl = data.domain;
+      app.use(
+        helmet({
+          frameguard: {
+            action: 'allow-from',
+            domain: 'https://'+shopUrl
+          }
+        })
+      );
+  }, function (reason) {
+    console.log(reason); // print error; 
+  }).catch(function (err) {
+    console.log(err);
+  });
+
+  // Secure your Express apps by setting various HTTP headers. Documentation: https://github.com/helmetjs/helmet
+  
 }
 
 const env = {
