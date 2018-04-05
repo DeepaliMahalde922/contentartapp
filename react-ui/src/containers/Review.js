@@ -73,7 +73,7 @@ class BlogService extends React.Component {
       });
 
       /*Fetch Request Article to show data*/
-      const blogapiUrl = "https://323f3aa0.ngrok.io/api/getsinglearticles/:"+requestid;
+      const blogapiUrl = "https://contentartapp.herokuapp.com/api/getsinglearticles/:"+requestid;
       const blogInit = {
         method: 'GET',
         headers: {
@@ -122,8 +122,8 @@ class BlogService extends React.Component {
   _onPressPayemnt = () => {
 
       let articleid = this.state.requestId;
-      var url = new URL("https://323f3aa0.ngrok.io/api/appcharges"),
-          params = {updateque:REACT_APP_SHOP_ORIGIN, articleId:articleid }
+      var url = new URL("https://contentartapp.herokuapp.com/api/appcharges"),
+          params = {updateque:SHOP_ORIGIN, articleId:articleid }
 
       Object.keys(params).forEach(key => url.searchParams.append(key, params[key]))
 
