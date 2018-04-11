@@ -104,7 +104,7 @@ class Adminreview extends React.Component {
   handleGoTolist = () => {
     const { history } = this.props;
     
-    if(SHOP_ORIGIN == 'test-account-13.myshopify.com'){
+    if(SHOP_ORIGIN == 'contentmark.myshopify.com'){
       history.push('/adminorderlist');
     }else{
       history.push('/orderlist');  
