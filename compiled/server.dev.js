@@ -84,8 +84,8 @@ var isTest = exports.isTest = ENV === 'test';
 var SCOPES = exports.SCOPES = 'read_orders,read_products, read_content, write_content';
 var ACTIVATE_CHARGE_ROUTE = exports.ACTIVATE_CHARGE_ROUTE = '/activate_charge';
 
-/* export const APP_NAME = 'testapp999'; //Live */
-var APP_NAME = exports.APP_NAME = 'testapp999'; //Local dev
+/* export const APP_NAME = 'ContentMark'; //Live */
+var APP_NAME = exports.APP_NAME = 'ContentMark'; //Local dev
 /* export const APP_NAME = 'devapp999'; //local live */
 
 var APP_URL = exports.APP_URL = 'https://contentartapp.herokuapp.com'; //Local dev
@@ -857,8 +857,8 @@ exports.default = function () {
                 var articleContent = {
                   'article': {
                     "title": title,
-                    "author": "testapp999",
-                    "tags": "This Post, Has Been Created by testapp999",
+                    "author": "ContentMark",
+                    "tags": "This Post, Has Been Created by ContentMark",
                     "body_html": content,
                     "published_at": time_format,
                     "published": true
