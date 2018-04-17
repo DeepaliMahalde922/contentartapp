@@ -84,13 +84,9 @@ var isTest = exports.isTest = ENV === 'test';
 var SCOPES = exports.SCOPES = 'read_orders,read_products, read_content, write_content';
 var ACTIVATE_CHARGE_ROUTE = exports.ACTIVATE_CHARGE_ROUTE = '/activate_charge';
 
-/* export const APP_NAME = 'ContentMark'; //Live */
 var APP_NAME = exports.APP_NAME = 'testapp999'; //Local dev
-/* export const APP_NAME = 'devapp999'; //local live */
 
 var APP_URL = exports.APP_URL = 'https://contentartapp.herokuapp.com'; //Local dev
-
-/* export const APP_URL = 'https://84c4484d.ngrok.io'; //local live */
 
 var APP_HOME_ROUTE = exports.APP_HOME_ROUTE = '/home';
 var AUTH_CALLBACK_ROUTE = exports.AUTH_CALLBACK_ROUTE = '/auth/callback';
