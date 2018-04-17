@@ -84,7 +84,7 @@ var isTest = exports.isTest = ENV === 'test';
 var SCOPES = exports.SCOPES = 'read_orders,read_products, read_content, write_content';
 var ACTIVATE_CHARGE_ROUTE = exports.ACTIVATE_CHARGE_ROUTE = '/activate_charge';
 
-var APP_NAME = exports.APP_NAME = 'testapp999'; //Local dev
+var APP_NAME = exports.APP_NAME = 'contentmark'; //Local dev
 
 var APP_URL = exports.APP_URL = 'https://contentartapp.herokuapp.com'; //Local dev
 
