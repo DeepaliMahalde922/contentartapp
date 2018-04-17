@@ -85,7 +85,7 @@ var SCOPES = exports.SCOPES = 'read_orders,read_products, read_content, write_co
 var ACTIVATE_CHARGE_ROUTE = exports.ACTIVATE_CHARGE_ROUTE = '/activate_charge';
 
 /* export const APP_NAME = 'ContentMark'; //Live */
-var APP_NAME = exports.APP_NAME = 'ContentMark'; //Local dev
+var APP_NAME = exports.APP_NAME = 'testapp999'; //Local dev
 /* export const APP_NAME = 'devapp999'; //local live */
 
 var APP_URL = exports.APP_URL = 'https://contentartapp.herokuapp.com'; //Local dev
