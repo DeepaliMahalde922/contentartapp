@@ -5,3 +5,4 @@
 /react-ui/flow-typed/**
 /react-ui/node_modules/**
 /react-ui/build/**
+.env
